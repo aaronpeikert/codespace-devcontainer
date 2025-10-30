@@ -1,3 +1,8 @@
 [deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 LanguageServer = "2b0e0bc5-e4fd-59b4-8912-456d1b03d8d7"
+StableRNGs = "860ef19b-820b-49d6-a774-d7a799459cd3"
+StructuralEquationModels = "383ca8c5-e4ff-4104-b0a9-f7b279deed53"
 SymbolServer = "cf896787-08d5-524d-9de7-132aaa0cb996"
