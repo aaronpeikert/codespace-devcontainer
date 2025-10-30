@@ -1,0 +1,22 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# DevContainer files (already in .devcontainer/)
+.devcontainer
+
+# GitHub files
+.github
+
+# Local development
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Don't copy these into the build context (only Project.toml and Manifest.toml are needed)
+**/*.jl
+data/
+results/
+output/
