@@ -1,0 +1,19 @@
+{
+  "name": "Julia Development Container",
+  "image": "julia:1.12",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "julialang.language-julia"
+      ],
+      "settings": {
+        "julia.enableTelemetry": false
+      }
+    }
+  },
+
+  "postCreateCommand": "julia -e 'using Pkg; Pkg.add([\"LanguageServer\", \"SymbolServer\"])'",
+
+  "remoteUser": "root"
+}
