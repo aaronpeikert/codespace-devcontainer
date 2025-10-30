@@ -2,12 +2,6 @@
   "name": "Julia Development Container",
   "image": "ghcr.io/aaronpeikert/codespace-devcontainer:latest",
 
-  // Alternatively, build from local Dockerfile for development:
-  // "build": {
-  //   "dockerfile": "Dockerfile",
-  //   "context": ".."
-  // },
-
   "customizations": {
     "vscode": {
       "extensions": [

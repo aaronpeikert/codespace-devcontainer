@@ -1,4 +1,5 @@
-FROM julia:1.12
+ARG JULIA_VERSION=1.12
+FROM julia:${JULIA_VERSION}
 
 # Set working directory
 WORKDIR /workspace

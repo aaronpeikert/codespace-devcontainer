@@ -26,6 +26,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Extract Julia version from Manifest.toml
+        id: julia-version
+        run: |
+          JULIA_VERSION=$(grep '^julia_version = ' Manifest.toml | sed 's/julia_version = "\(.*\)"/\1/')
+          echo "version=${JULIA_VERSION}" >> $GITHUB_OUTPUT
+          echo "Detected Julia version: ${JULIA_VERSION}"
+
       - name: Log in to Container Registry
         uses: docker/login-action@v3
         with:
@@ -50,3 +57,5 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            JULIA_VERSION=${{ steps.julia-version.outputs.version }}
